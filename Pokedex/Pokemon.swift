@@ -10,8 +10,8 @@ import Foundation
 
 // this class will hold all of our pokemon
 class Pokemon {
-    private var _name: String!
-    private var _pokedexID: Int!
+    fileprivate var _name: String!
+    fileprivate var _pokedexID: Int!
     
     // **** getters ****
     var name: String {
