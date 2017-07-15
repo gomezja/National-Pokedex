@@ -99,7 +99,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        var poke: Pokemon!
         
+        if inSearchMode {
+            poke = filteredPokemon[indexPath.row]
+            
+        } else {
+            poke = pokemon[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
     }
     
     // sets the number of items in section
@@ -148,6 +157,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             filteredPokemon = pokemon.filter({$0.name.range(of: lower) !=  nil})
             collection.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destination as? PokemonDetailVC {
+                if let poke  = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
         }
     }
 }
