@@ -181,6 +181,9 @@
                                             <constraint firstAttribute="height" constant="23" id="yeH-9H-Mrm"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="SxT-Xe-hXl" eventType="touchUpInside" id="dL9-Jp-LQT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -380,7 +383,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Mz0-ZD-gdJ">
                                 <rect key="frame" x="25" y="440" width="270" height="120"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-A4-cms">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-A4-cms">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-24-icr">
@@ -424,12 +427,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="Rei-1s-aUM" id="VPJ-WV-id3"/>
+                        <outlet property="currentEvoImg" destination="wKF-A4-cms" id="FQA-um-B8t"/>
+                        <outlet property="defenseLbl" destination="BF9-c4-Exp" id="F0C-Nj-dh7"/>
+                        <outlet property="descriptionLbl" destination="Ueb-4A-O6w" id="edX-SQ-hVE"/>
+                        <outlet property="evoLbl" destination="Krt-uH-6vb" id="sM7-nQ-Zpm"/>
+                        <outlet property="heightLbl" destination="F7G-xF-ZLL" id="Cbk-Da-6ua"/>
+                        <outlet property="mainImg" destination="O3i-h9-f7S" id="WPl-Pu-4qm"/>
                         <outlet property="nameLbl" destination="IsF-3X-cPf" id="uMy-RT-bgs"/>
+                        <outlet property="nextEvoImg" destination="TAD-24-icr" id="eMg-au-elo"/>
+                        <outlet property="pokedexLbl" destination="UUU-dF-fiF" id="Ehv-rr-fuR"/>
+                        <outlet property="typeLbl" destination="ppr-oR-KXe" id="Bue-9m-Yg0"/>
+                        <outlet property="weightLbl" destination="han-TX-k7t" id="qXo-Ns-fxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7u1-iQ-Ra5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570" y="136"/>
+            <point key="canvasLocation" x="936" y="136"/>
         </scene>
     </scenes>
     <resources>
